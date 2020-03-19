@@ -13,8 +13,11 @@ Multiplity
 •	li*4 + Enter
 
 Lorem
-•	lorem10 
+•	lorem10 + Enter
   for 10 characters
 
-Auto Create div with ID
-•	div#
+Auto Create element with ID + Enter
+•	h1#id
+
+Auto Create a Div
+•	#id

@@ -3,3 +3,6 @@ Listar módulos
 
 Info de un módulo
 • b [BUNDLE_ID]
+
+Información acerca de por un módulo no está funcionando
+• diag [BUNDLE_ID]

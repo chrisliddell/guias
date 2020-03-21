@@ -17,7 +17,10 @@ Lorem
   for 10 characters
 
 Auto Create element with ID + Enter
-•	h1#id
+•	h1#id + Enter
 
 Auto Create a Div
-•	#id
+•	#id + Enter
+
+Select the same content down and change it
+•	[Select text] + Ctrl D + Ctrl D + ...

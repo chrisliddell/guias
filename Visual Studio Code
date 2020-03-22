@@ -20,7 +20,11 @@ Auto Create element with ID + Enter
 •	h1#id + Enter
 
 Auto Create a Div
+•	#id.class + Enter
+
+Auto create a div with a class
 •	#id + Enter
+
 
 Select the same content down and change it
 •	[Select text] + Ctrl D + Ctrl D + ...

@@ -1,5 +1,28 @@
 Guia para creación de Ecommerce.
 
+Pasar de localhost a servidor de AWS
+1. Conectarse por FTP (descargar el .pem y convertirlo a .ppk)
+2. Pasar al servidor un comprimido de Magento base, extraerlo en /var/www/html
+3. Sobreescribir las carpetas app, pub y var con las existentes en local
+4. En el server, descargar apache, mysql y php según la versión de magento que se vaya a usar.
+5. En local, ejecutar:
+      mysqldump -u root -p magento > magentoExport.sql
+6. En el servidor de AWS, crear una base de datos llamada magento y ejecutar:
+      mysql -u username -p magento < magentoExport.sql
+7. Habilitar las extensiones de php correspondientes (buscar en el tech stack de Magento).
+8. Correr los comandos:
+      php bin/magento setup:upgrade
+      php bin/magento setup:di:compile
+      php bin/magento setup:static-content:deploy -f
+      php bin/magento c:f
+      php bin/magento indexer:reindex
+9. Editar el archivo app/etc/env.php para actualizar los credenciales de la base de datos
+10. Asignarle permisos de lectura y escritura a todos los archivos en /var/www/html.
+11. Correr los comandos
+     php bin/magento setup:store-config:set --base-url="http://URL/"
+     php bin/magento setup:store-config:set --base-url-secure="https://URL/"
+     sudo a2enmod rewrite
+     service apache2 restart
 
 Productos configurables
 1. Habilitar que se muestre la imagen del producto hijo en los display de imagenes
